@@ -1,97 +1,140 @@
 <template>
-    <div class="icons">
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png" alt="">
-            </div>
-            <p class="icon-desc">热门景点</p>
+  <div class="icons">
+    <swiper>
+      <swiper-slide v-for="(page,index) of pages" :key=index>
+        <div class="icon" v-for="item of page" :key="item.id">
+          <div class="icon-img">
+            <img
+              class="icon-img-content"
+              :src="item.url"
+              alt
+            >
+          </div>
+          <p class="icon-desc">{{item.desc}}</p>
         </div>
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png" alt="">
-            </div>
-            <p class="icon-desc">一日游</p>
-        </div>
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png" alt="">
-            </div>
-            <p class="icon-desc">武汉必游</p>
-        </div>
-         <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png" alt="">
-            </div>
-            <p class="icon-desc">亲子游</p>
-        </div>
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png" alt="">
-            </div>
-            <p class="icon-desc">木兰天池</p>
-        </div>
-          <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png" alt="">
-            </div>
-            <p class="icon-desc">动植物园</p>
-        </div>
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png" alt="">
-            </div>
-            <p class="icon-desc">水上玩乐</p>
-        </div>
-        <div class="icon">
-            <div class="icon-img">
-                <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png" alt="">
-            </div>
-            <p class="icon-desc">欢乐谷</p>
-        </div>
-    </div>
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
 
 <script>
 export default {
-    name:"HomeIcons"
-}
+  name: "HomeIcons",
+  data: function() {
+    return {
+      iconList: [
+        {
+          id: "001",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "热门景点"
+        },
+        {
+          id: "002",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+          desc: "一日游"
+        },
+        {
+          id: "003",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+          desc: "武汉必游"
+        },
+        {
+          id: "004",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+          desc: "亲子游"
+        },
+        {
+          id: "005",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png",
+          desc: "木兰天池"
+        },
+        {
+          id: "006",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+          desc: "水上玩乐"
+        },
+        {
+          id: "007",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+          desc: "欢乐谷"
+        },
+        {
+          id: "008",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+          desc: "动植物园"
+        },
+        {
+          id: "009",
+          url:
+            "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+          desc: "水上玩乐"
+        },
+      ]
+    };
+  },
+  computed:{
+    pages(){
+      const pages=[];
+      this.iconList.forEach((item,index)=>{
+        const page = Math.floor(index/8);
+        if(!pages[page]){
+          pages[page] = [];
+        }
+        pages[page].push(item);
+      })
+      return pages;
+    }
+    
+  }
+};
 </script>
 <style lang="stylus" scoped>
-    .icons
-        overflow:hidden
-        height :0
-        padding-bottom :50%
- 
-        .icon
-            position:relative
-            float: left
-            overflow :hidden
-            width :25%
-            height :0
-            padding-bottom :25%
- 
-            .icon-img
-                position :absolute
-                top:0
-                left :0
-                right:0
-                bottom .44rem
- 
-                box-sizing:border-box
-                padding:.1rem
-                .icon-img-content
-                    display:block
-                    margin:0 auto
-                    height :100%
-            .icon-desc
-                position :absolute;
-                left :0
-                right :0
-                bottom :0
-                height :.44rem
-                line-height :.44rem
-                color:#333
-                text-align:center
+.icons >>> .swiper-container {
+  height: 0;
+  padding-bottom: 50%;
+}
 
+.icon {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 25%;
+  height: 0;
+  padding-bottom: 25%;
 
+  .icon-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0.44rem;
+    box-sizing: border-box;
+    padding: 0.1rem;
+
+    .icon-img-content {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+
+  .icon-desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    color: #333;
+    text-align: center;
+  }
+}
 </style> 
