@@ -1,87 +1,91 @@
 {
-    "ret":true,
-    "data":{
-        "city":"北京",
-        "iconList": [
-            {
-              "id": "001",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-              "desc": "热门景点"
-            },
-            {
-              "id": "002",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-              "desc": "一日游"
-            },
-            {
-              "id": "003",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-              "desc": "武汉必游"
-            },
-            {
-              "id": "004",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-              "desc": "亲子游"
-            },
-            {
-              "id": "005",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png",
-              "desc": "木兰天池"
-            },
-            {
-              "id": "006",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-              "desc": "水上玩乐"
-            },
-            {
-              "id": "007",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
-              "desc": "欢乐谷"
-            },
-            {
-              "id": "008",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-              "desc": "动植物园"
-            },
-            {
-              "id": "009",
-              "url":
-                "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-              "desc": "水上玩乐"
-            }
-          ],
-          "recommendList":[
-            {
-                "src":"https://imgs.qunarzz.com/sight/p0/1504/c6/c6906545521a7472.water.jpg_224x148_a342aeda.jpg",
-                "title":"大连圣亚海洋",
-                "desc":"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-            },
-            {
-                "src":"https://imgs.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_224x148_2f0307b6.jpg",
-                "title":"武汉黄鹤楼",
-                "desc":"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-            }
-        ],
-        "weekendList":[
-            {
-                "src":"http://img1.qunarzz.com/sight/source/1505/d5/abe8a48a6ef8bf.jpg_r_640x214_7c41cc81.jpg",
-                "title":"大连圣亚海洋",
-                "desc":"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-            },
-            {
-                "src":"http://img1.qunarzz.com/sight/source/1507/e0/4aae49007c8a64.jpg_r_640x214_65a42783.jpg",
-                "title":"武汉黄鹤楼",
-                "desc":"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-            }
-        ]
-
-    }
+  "ret": true,
+  "data": {
+    "city": "北京",
+    "iconList": [
+      {
+        "id": "001",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "热门景点"
+      },
+      {
+        "id": "002",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      },
+      {
+        "id": "003",
+        "url": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "武汉必游"
+      },
+      {
+        "id": "004",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+        "desc": "亲子游"
+      },
+      {
+        "id": "005",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png",
+        "desc": "木兰天池"
+      },
+      {
+        "id": "006",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+        "desc": "水上玩乐"
+      },
+      {
+        "id": "007",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+        "desc": "欢乐谷"
+      },
+      {
+        "id": "008",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
+      },
+      {
+        "id": "009",
+        "url": "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+        "desc": "水上玩乐"
+      }
+    ],
+    "recommendList": [
+      {
+        "src": "https://imgs.qunarzz.com/sight/p0/1504/c6/c6906545521a7472.water.jpg_224x148_a342aeda.jpg",
+        "title": "大连圣亚海洋",
+        "desc": "浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
+      },
+      {
+        "src": "https://imgs.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_224x148_2f0307b6.jpg",
+        "title": "武汉黄鹤楼",
+        "desc": "浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
+      }
+    ],
+    "weekendList": [
+      {
+        "src": "http://img1.qunarzz.com/sight/source/1505/d5/abe8a48a6ef8bf.jpg_r_640x214_7c41cc81.jpg",
+        "title": "大连圣亚海洋",
+        "desc": "浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
+      },
+      {
+        "src": "http://img1.qunarzz.com/sight/source/1507/e0/4aae49007c8a64.jpg_r_640x214_65a42783.jpg",
+        "title": "武汉黄鹤楼",
+        "desc": "浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
+      }
+    ],
+    "swiperList": [
+      {
+        "id": 1,
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/e440c31af79c0b9d1a1e84c577205562.jpg_750x200_0729c45b.jpg"
+      },
+      {
+        "id": 2,
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/667757f979fa38b12c4986f9930b6695.jpg_750x200_6cca7add.jpg"
+      },
+      {
+        "id": 3,
+        "url": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+      }
+    ]
+  }
 }

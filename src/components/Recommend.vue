@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item in recommendList" :key="item.title">
+            <li class="item border-bottom" v-for="item in recommends" :key="item.title">
                 <img :src=item.src alt="" class="item-img">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,20 +17,10 @@
 <script>
 export default {
     name:"HomeRecommed",
+    props:["recommends"],
     data:function(){
         return {
-            recommendList:[
-                {
-                    src:"https://imgs.qunarzz.com/sight/p0/1504/c6/c6906545521a7472.water.jpg_224x148_a342aeda.jpg",
-                    title:"大连圣亚海洋",
-                    desc:"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-                },
-                {
-                    src:"https://imgs.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_224x148_2f0307b6.jpg",
-                    title:"武汉黄鹤楼",
-                    desc:"浪漫大连首战，浪漫的海洋主题乐园浪漫大连首战，浪漫的海洋主题乐园"
-                }
-            ]
+            
         }
     }
 }

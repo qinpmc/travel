@@ -1,10 +1,10 @@
 <template>
   <div>
     <home-header :city="city"></home-header>
-    <home-swiper ></home-swiper>
+    <home-swiper :swipers="swipers" ></home-swiper>
     <home-icons :icons="iconList"></home-icons>
-    <HomeRecommed></HomeRecommed>
-    <HomeWeekend></HomeWeekend>
+    <HomeRecommed :recommends="recommendList"></HomeRecommed>
+    <HomeWeekend :weekends="weekendList"></HomeWeekend>
   </div>
 </template>
 
@@ -28,13 +28,14 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      axios.get("http://localhost:8081/index.json").then(this.getHomeInfoSucc);
+      axios.get("http://localhost:8080/index.json").then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
       if(res.data.ret){
         this.weekendList = res.data.data.weekendList;
         this.recommendList = res.data.data.recommendList;
         this.iconList = res.data.data.iconList;
+        this.swipers = res.data.data.swiperList;
         this.city = res.data.data.city;
       }
 
@@ -48,7 +49,8 @@ export default {
       city:'',
       weekendList: [],
       recommendList: [],
-      iconList: []
+      iconList: [],
+      swipers:[]
     };
   }
 };

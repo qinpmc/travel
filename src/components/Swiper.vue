@@ -2,24 +2,10 @@
   <div class="wrapper">
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide>
+      <swiper-slide v-for="item of swipers" :key="item.id">
         <img
           class="swiper-img"
-          src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/e440c31af79c0b9d1a1e84c577205562.jpg_750x200_0729c45b.jpg"
-        >
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          class="swiper-img"
-          src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/667757f979fa38b12c4986f9930b6695.jpg_750x200_6cca7add.jpg"
-          alt
-        >
-      </swiper-slide>
-      <swiper-slide>
-        <img
-          class="swiper-img"
-          src="http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
-          alt
+          :src= "item.url"
         >
       </swiper-slide>
       <!-- Optional controls -->
@@ -32,6 +18,7 @@
 import "swiper/dist/css/swiper.css";
 export default {
   name: "HomeSwiper",
+  props:["swipers"],
   data() {
     return {
       swiperOption: {
@@ -41,11 +28,11 @@ export default {
       }
     };
   },
-  computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper;
-    }
-  },
+  // computed: {
+  //   swiper() {
+  //     return this.$refs.mySwiper.swiper;
+  //   }
+  // },
   mounted() {
     // current swiper instance
     // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
