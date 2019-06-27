@@ -11,11 +11,11 @@
 // @ is an alias to /src
 
 <script>
-import HomeHeader from "../components/Header";
-import HomeSwiper from "../components/Swiper";
-import HomeIcons from "../components/Icons";
-import HomeRecommed from "../components/Recommend";
-import HomeWeekend from "../components/Weekend";
+import HomeHeader from "../components/home/Header";
+import HomeSwiper from "../components/home/Swiper";
+import HomeIcons from "../components/home/Icons";
+import HomeRecommed from "../components/home/Recommend";
+import HomeWeekend from "../components/home/Weekend";
 import axios from "axios";
 export default {
   name: "Home",
