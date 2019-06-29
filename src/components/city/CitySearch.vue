@@ -1,0 +1,28 @@
+<template>
+    <div class="search">
+       <input type="text" name="" id="" placeholder="请输入城市名称" class="search-input">
+    </div>
+</template>
+<script>
+export default {
+    name:"CitySearch"    
+}
+</script>
+
+<style lang="stylus" scoped> 
+    @import '~@/assets/styles/varibles.styl'
+    .search
+        height :.72rem
+        padding:0 .1rem
+        background:$bgColor
+        .search-input
+            box-sizing:border-box
+            width:100%
+            height:0.62rem
+            padding: 0 .1rem
+            line-height :.62rem
+            text-align:center
+            border radius 0.06rem
+            color:#666
+</style>
+ 
