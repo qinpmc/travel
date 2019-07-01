@@ -1,12 +1,19 @@
 <template>
     <ul class="list" >
-        <li class="item" v-for="(value,key) of cities" :key="value.id">{{key}}</li>
+        <li class="item" v-for="(value,key) of cities" :key="value.id"
+            @click = "handleLetterClick"
+        >{{key}}</li>
     </ul>
 </template>
 <script>
 export default {
     name:"Alphabet",
-    props:["cities"] 
+    props:["cities"],
+    methods:{
+        handleLetterClick(e){
+            this.$emit("letterChange",e.target.innerText)
+        }
+    }
 }
 </script>
 
